@@ -12,7 +12,7 @@ import static java.util.stream.Collectors.toList;
  * @version 1.0
  * @date 2019-03-29
  */
-public class demo {
+public class Demo {
 
     public static void stream(){
         List<User> userList=new ArrayList<>();
