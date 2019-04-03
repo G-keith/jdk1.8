@@ -59,5 +59,6 @@ public class Demo {
         demo.testLambda();
         demo.testLambda2();
         demo.testLambda3();
+
     }
 }
