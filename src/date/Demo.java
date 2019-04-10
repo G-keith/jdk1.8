@@ -37,6 +37,20 @@ public class Demo {
         LocalDateTime date4 = date3.minusYears(2);
         System.out.println(date4);
     }
+
+    public void test2(){
+        // 时间戳  1970年1月1日00：00：00 到某一个时间点的毫秒值
+        // 默认获取UTC时区
+        Instant ins = Instant.now();
+        System.out.println(ins);
+
+        System.out.println(LocalDateTime.now().toInstant(ZoneOffset.of("+8")).toEpochMilli());
+        System.out.println(System.currentTimeMillis());
+
+        System.out.println(Instant.now().toEpochMilli());
+        System.out.println(Instant.now().atOffset(ZoneOffset.ofHours(8)).toInstant().toEpochMilli());
+    }
+
     public void test3(){
         // Duration:计算两个时间之间的间隔
         // Period：计算两个日期之间的间隔
@@ -44,6 +58,7 @@ public class Demo {
         LocalDate localDate2 = LocalDate.of(2016,12,12);
         Period pe = Period.between(localDate, localDate2);
         System.out.println(pe);
+        System.out.println("===========================================");
         LocalTime localTime = LocalTime.now();
         try {
             Thread.sleep(1000);
@@ -96,6 +111,7 @@ public class Demo {
     public static void main(String[] args) {
         Demo demo=new Demo();
         //demo.test();
+        //demo.test2();
         //demo.test3();
         demo.test5();
     }
