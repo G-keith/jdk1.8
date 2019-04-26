@@ -38,5 +38,20 @@ public class Threadpool {
         //返回一个线程池（这个线程池只有一个线程）,这个线程
         //池可以在线程死后（或发生异常时）重新启动一个线程来替代原来的线程继续执行下去！
         ExecutorService newSinglePool=Executors.newSingleThreadExecutor();
-    }
+
+        //线程参数意思
+        /**
+         * corePoolSize： 线程池里最小线程数
+         *  maximumPoolSize：线程池里最大线程数量，超过最大线程时候会使用 RejectedExecutionHandler
+         *  keepAliveTime：线程最大的存活时间，超过这个时间就会被回收
+         *  unit：线程最大的存活时间的单位
+         *  workQueue：缓存需要执行的异步任务的队列
+         *  threadFactory：新建线程工厂
+         *  handler：拒绝策略，表示当workQueue已满，且池中的线程数达到maximumPoolSize时，线程池拒绝添加新任务时采取的策略。
+         *          DiscardPolicy：抛弃当前任务，DiscardOldestPolicy：扔掉最旧的，
+         *          CallerRunsPolicy：由向线程池提交任务的线程来执行该任务，
+         *          AbortPolicy：抛出 RejectedExecutionException 异常。
+         */
+
+        }
 }

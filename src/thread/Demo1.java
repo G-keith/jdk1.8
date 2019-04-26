@@ -26,31 +26,28 @@ public class Demo1 {
         //使用 guava 开源框架的 ThreadFactoryBuilder 给线程池的线程设置名字
         ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("demo-thread-%d").build();
 
-        ExecutorService pool = new ThreadPoolExecutor(1, 1, 0L,
+        ExecutorService pool = new ThreadPoolExecutor(10, 11, 0L,
                 TimeUnit.MILLISECONDS,
                 new LinkedBlockingDeque<>(10),
                 namedThreadFactory,
                 new ThreadPoolExecutor.AbortPolicy());
 
-        pool.execute(() -> {
-            for(int i=0;i<10;i++){
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(Thread.currentThread().getName()+"_"+i);
-            }
-        });
+            pool.execute(() -> {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(Thread.currentThread().getName()+"_"+"0");
+            });
+
         pool.execute(() ->{
-            for(int i=0;i<10;i++){
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(Thread.currentThread().getName()+"_"+i);
-            }
+                System.out.println(Thread.currentThread().getName()+"_"+"1");
         });
         pool.shutdown();
     }
