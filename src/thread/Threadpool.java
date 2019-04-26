@@ -39,7 +39,7 @@ public class Threadpool {
         //池可以在线程死后（或发生异常时）重新启动一个线程来替代原来的线程继续执行下去！
         ExecutorService newSinglePool=Executors.newSingleThreadExecutor();
 
-        //线程参数意思
+        //ThreadPoolExecutor参数意思
         /**
          * corePoolSize： 线程池里最小线程数
          *  maximumPoolSize：线程池里最大线程数量，超过最大线程时候会使用 RejectedExecutionHandler
