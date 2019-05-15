@@ -1,5 +1,7 @@
 package equals;
 
+import java.util.StringJoiner;
+
 /**
  * @author keith
  * @version 1.0
@@ -13,5 +15,16 @@ public class Demo1 {
         Student student2=new Student("小明",1);
         System.out.println(student1==student2);
         System.out.println(student1.equals(student2));
+
+        StringJoiner sj = new StringJoiner("Hollis");
+
+        sj.add("hollischuang");
+        sj.add("Java干货");
+        System.out.println(sj.toString());
+
+        StringJoiner sj1 = new StringJoiner(":","[","]");
+
+        sj1.add("Hollis").add("hollischuang").add("Java干货");
+        System.out.println(sj1.toString());
     }
 }
