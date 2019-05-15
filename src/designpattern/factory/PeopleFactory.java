@@ -8,10 +8,10 @@ package designpattern.factory;
  */
 public class PeopleFactory {
 
-    public static People getPeople(String type,String name,String sex,Integer age){
-        if("man".equals(type)){
+    public static People getPeople(PeopleEnum type, String name, String sex, Integer age){
+        if(PeopleEnum.MAN.equals(type)){
             return new ManPeople(name,sex,age);
-        }else if("woman".equals(type)){
+        }else if(PeopleEnum.WOMAN.equals(type)){
             return new WomanPeople(name,sex,age);
         }else{
             return null;
