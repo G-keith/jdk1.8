@@ -7,6 +7,10 @@ package designpattern.builder;
  */
 public class MealBuilder {
 
+    /**
+     * 套餐一
+     * @return
+     */
     public Meal prepareVegMeal (){
         Meal meal = new Meal();
         meal.addItem(new ChickenBurger(2));
@@ -14,6 +18,10 @@ public class MealBuilder {
         return meal;
     }
 
+    /**
+     * 套餐二
+     * @return
+     */
     public Meal prepareNonVegMeal (){
         Meal meal = new Meal();
         meal.addItem(new BeefBurger(4));

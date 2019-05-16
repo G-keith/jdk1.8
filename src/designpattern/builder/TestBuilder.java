@@ -5,7 +5,7 @@ package designpattern.builder;
  * @version 1.0
  * @date 2019-05-16
  */
-public class BuilderPatternDemo {
+public class TestBuilder {
 
     public static void main(String[] args) {
         MealBuilder mealBuilder = new MealBuilder();
@@ -13,11 +13,11 @@ public class BuilderPatternDemo {
         Meal vegMeal = mealBuilder.prepareVegMeal();
         System.out.println("Veg Meal");
         vegMeal.showItems();
-        System.out.println("Total Cost: " +vegMeal.getCost(5));
+        System.out.println("Total Cost: " +vegMeal.getCost());
 
         Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
-        System.out.println("\n\nNon-Veg Meal");
+        System.out.println("Non-Veg Meal");
         nonVegMeal.showItems();
-        System.out.println("Total Cost: " +nonVegMeal.getCost(5));
+        System.out.println("Total Cost: " +nonVegMeal.getCost());
     }
 }

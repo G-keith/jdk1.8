@@ -17,7 +17,7 @@ public class Meal {
         items.add(item);
     }
 
-    public float getCost(int num){
+    public float getCost(){
         float cost = 0.0f;
         cost= (float) items.stream().mapToDouble(Item::price).sum();
         return cost;
