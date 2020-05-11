@@ -10,10 +10,12 @@ import java.util.TreeMap;
 public class Map {
 
     public static void main(String[] args) {
+        //排序
         TreeMap map=new TreeMap();
         map.put("1",2);
         map.put("3",2);
         map.put("2",2);
+        map.put("10",2);
         System.out.println(map);
     }
 }

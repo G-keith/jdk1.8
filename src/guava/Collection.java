@@ -1,7 +1,6 @@
 package guava;
 
 import com.google.common.collect.*;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 /**
  * @author keith

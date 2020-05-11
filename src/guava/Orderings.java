@@ -15,21 +15,23 @@ public class Orderings {
 
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(new Integer(5));
-        numbers.add(new Integer(2));
-        numbers.add(new Integer(15));
-        numbers.add(new Integer(51));
-        numbers.add(new Integer(53));
-        numbers.add(new Integer(35));
-        numbers.add(new Integer(45));
-        numbers.add(new Integer(32));
-        numbers.add(new Integer(43));
-        numbers.add(new Integer(16));
+        numbers.add(5);
+        numbers.add(2);
+        numbers.add(15);
+        numbers.add(51);
+        numbers.add(53);
+        numbers.add(35);
+        numbers.add(45);
+        numbers.add(32);
+        numbers.add(43);
+        numbers.add(16);
         Ordering ordering = Ordering.natural();
+        System.out.println(ordering.isOrdered(numbers));
         Collections.sort(numbers);
         System.out.println(numbers);
         //是否排序成功(从小到大)
         boolean b=ordering.isOrdered(numbers);
+        System.out.println(b);
 
 
 

@@ -12,13 +12,13 @@ public class Precodition {
 
     public static void main(String[] args) {
         Precodition precodition = new Precodition();
-        System.out.println(precodition.getValue(4));
+        System.out.println(precodition.getValue());
     }
-    public int getValue(int input) {
+    private int getValue() {
         int[] data = {1, 2, 3, 4, 5};
-        Preconditions.checkElementIndex(input, data.length,
+        Preconditions.checkElementIndex(4, data.length,
                 "Illegal Argument passed: Invalid index.");
-        return data[input];
+        return data[4];
     }
 
 

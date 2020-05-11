@@ -24,7 +24,7 @@ public class Test {
         System.out.println(a);
         System.out.println(a1);
 
-        //深克隆，不改变B
+        //深克隆，改变B，A对应的值不变
         B b2=new B("篮球");
         c.setB(b2);
         C c1=(C)c.clone();
