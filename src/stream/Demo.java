@@ -2,6 +2,7 @@ package stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Vector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,10 +21,10 @@ public class Demo {
         userList.add(new User("小红",20,"女"));
         userList.add(new User("小明",25,"男"));
         userList.add(new User("张三",50,"男"));
-        userList.forEach(System.out::println);
+//        userList.forEach(System.out::println);
 //        //流的删选写法
-        List<User> filterList=userList.stream().filter(user -> user.getAge()>20).collect(toList());
-        System.out.println("删选写法："+filterList);
+//        List<User> filterList=userList.stream().filter(user -> user.getAge()>20).collect(toList());
+//        System.out.println("删选写法："+filterList);
 //        //去重
 //        //List<User> distinctList=userList.stream().distinct().collect(toList());
 //        //截取
@@ -35,12 +36,15 @@ public class Demo {
 //        //获取某一属性集合
 //        List<String> collection=userList.stream().map(User::getName).collect(toList());
 //        System.out.println("获取某一属性集合："+collection);
+        //分组写法
+        Map<String,List<User>> listMap=userList.stream().collect(Collectors.groupingBy(User::getSex));
+        System.out.println(listMap);
         //设置值
-        userList.forEach(item->{
-            item.getName();
-            item.setName(item.getName()+"测试");
-        });
-        System.out.println(userList);
+//        userList.forEach(item->{
+//            item.getName();
+//            item.setName(item.getName()+"测试");
+//        });
+//        System.out.println(userList);
     }
 
 
