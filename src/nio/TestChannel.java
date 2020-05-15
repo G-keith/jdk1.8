@@ -180,11 +180,11 @@ public class TestChannel {
         CharsetDecoder cd=charset.newDecoder();
 
         CharBuffer charBuffer=CharBuffer.allocate(1024);
-        charBuffer.put("测试");
+        charBuffer.put("测试1235");
         charBuffer.flip();
         //编码
         ByteBuffer buffer=cn.encode(charBuffer);
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < buffer.limit(); i++) {
             buffer.get();
         }
         //解码
