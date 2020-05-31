@@ -5,6 +5,7 @@ import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -151,7 +152,7 @@ public class NioServer {
             /**
              * 读取buffer中的内容
              */
-            request += Charset.forName("UTF-8").decode(byteBuffer);
+            request += StandardCharsets.UTF_8.decode(byteBuffer);
         }
 
         /**

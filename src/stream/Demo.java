@@ -22,7 +22,7 @@ public class Demo {
         userList.add(new User("张三",29,"男"));
 //        userList.forEach(System.out::println);
 //        //流的删选写法
-//        List<User> filterList=userList.stream().filter(user -> user.getAge()>20).collect(toList());
+        List<User> filterList=userList.stream().filter(user -> user.getAge()>20).collect(toList());
 //        System.out.println("删选写法："+filterList);
 //        //去重
 //        //List<User> distinctList=userList.stream().distinct().collect(toList());
@@ -35,7 +35,7 @@ public class Demo {
 //        List<User> skipList=userList.stream().skip(1).collect(toList());
 //        System.out.println("跳过："+skipList);
 //        //获取某一属性集合
-//        List<String> collection=userList.stream().map(User::getName).collect(toList());
+        List<String> collection=userList.stream().map(User::getName).collect(toList());
 //        System.out.println("获取某一属性集合："+collection);
         //分组写法
         Map<String,List<User>> listMap=userList.stream().collect(Collectors.groupingBy(User::getSex));
